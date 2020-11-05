@@ -37,12 +37,7 @@ client.on("ready", () => {
     Logger.log(`[READY] Logged in as ${client.user.tag}! (${client.user.id})`);
     const localUsers = client.users.array().length;
     const servers = client.guilds.array().length;
-    client.user.setPresence({
-			game: {
-				name: `!help | ${servers} | ${localUsers} users`,
-				type: 0
-			}
-		})
+    client.user.setPresence(`!help | ${servers} servers | ${localUsers} users`)
 });
 
 client.on("disconnect", (event) => {
