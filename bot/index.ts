@@ -34,10 +34,13 @@ client.registry
     .registerCommandsIn(path.join(__dirname, "commands"));
 
 client.on("ready", () => {
-    Logger.log(`[READY] Logged in as ${client.user.tag}! (${client.user.id})`);
-    const localUsers = client.users.array().length;
+
+const localUsers = client.users.array().length;
     const servers = client.guilds.array().length;
-    client.user.setPresence(`!help | ${servers} servers | ${localUsers} users`)
+
+    Logger.log(`[READY] Logged in as ${client.user.tag}! (${client.user.id})`)
+
+    client.user.setactivity(`!help | ${servers} servers | ${localUsers} users`)
 });
 
 client.on("disconnect", (event) => {
