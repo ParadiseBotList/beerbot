@@ -36,7 +36,7 @@ client.registry
 client.on("ready", () => {
     const localUsers = client.users.array().length;
     const servers = client.guilds.array().length;
-    Logger.log(`[READY] Logged in as ${client.user.tag}! (${client.user.id})`)
+    Logger.log(`[READY] Logged in as ${client.user.tag}! (${client.user.id})`);
     client.user.setactivity(`!help | ${servers} servers | ${localUsers} users`);
 });
 
