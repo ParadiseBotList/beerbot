@@ -36,8 +36,8 @@ client.registry
 client.on("ready", () => {
     Logger.log(`[READY] Logged in as ${client.user.tag}! (${client.user.id})`);
 
-    let localUsers = client.users.array().length;
-    let servers = client.guilds.array().length;
+    const localUsers = client.users.array().length;
+    const servers = client.guilds.array().length;
 
     client.user.setPresence({
 			game: {
